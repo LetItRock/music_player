@@ -9,13 +9,20 @@
     "@types/react-dom": "16.8.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-react-hook": "^3.3.1",
+    "redux-saga": "^1.0.2",
+    "styled-components": "^4.2.0",
     "typescript": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom --coverage",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -26,5 +33,24 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.2",
+    "@types/redux-saga": "^0.10.5",
+    "@types/styled-components": "^4.1.14",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "react-test-renderer": "^16.8.6",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0"
+  }
 }
